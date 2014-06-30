@@ -22,4 +22,4 @@ RUN mkdir /etc/riemann
 ADD ./riemann.config /etc/riemann/riemann.config
 ADD ./config.rb /etc/riemann/riemann-dash-config.rb
 
-CMD ["riemann-dash", "/etc/riemann/riemann-dash-config.rb"]
+CMD echo 127.0.0.1 $(hostname) > /etc/hosts; /usr/bin/riemann /etc/riemann/riemann.config && riemann-dash /etc/riemann/riemann-dash-config.rb"
