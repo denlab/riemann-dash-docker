@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Patrick O'Doherty <p@trickod.com>
+MAINTAINER Herman Moreno <herman@crowdint.com>
 
 RUN apt-get update
 RUN apt-get install -y ruby1.9.1 ruby1.9.1-dev rubygems1.9.1 build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev curl default-jre-headless
@@ -16,8 +16,6 @@ EXPOSE 4567
 EXPOSE 5555
 EXPOSE 5555/udp
 EXPOSE 5556
-
-RUN mkdir /etc/riemann
 
 ADD ./riemann.config /etc/riemann/riemann.config
 ADD ./config.rb /etc/riemann/riemann-dash-config.rb
