@@ -4,7 +4,7 @@ MAINTAINER Herman Moreno <herman@crowdint.com>
 RUN apt-get update
 RUN apt-get install -y ruby1.9.1 ruby1.9.1-dev rubygems1.9.1 build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev curl default-jre-headless
 
-RUN curl http://aphyr.com/riemann/riemann_0.2.4_all.deb > /tmp/riemann_0.2.4_all.deb
+RUN curl https://aphyr.com/riemann/riemann_0.2.4_all.deb > /tmp/riemann_0.2.4_all.deb
 RUN dpkg -i /tmp/riemann_0.2.4_all.deb
 
 RUN gem install riemann-dash
