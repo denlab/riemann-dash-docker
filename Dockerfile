@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 MAINTAINER Herman Moreno <herman@crowdint.com>
 
 RUN apt-get update
